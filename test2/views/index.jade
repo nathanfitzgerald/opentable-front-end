@@ -13,6 +13,9 @@ block content
               span.item-name= item.name
               span.currency $
               span.price= item.price
+            if item.description
+              p
+                span.item-description= item.description
               
               
   #receipt
