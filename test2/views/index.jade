@@ -1,22 +1,27 @@
 extends layout
 
 block content
-  h1 #{restaurant.info.name}
-  ul.menu
-  -each section in restaurant.menu.sections
-    li.menu.menu-section
-      p.section-header= section.title
-      ul
-        -for item in section.items
-          li.menu-section-item
-            p 
-              span.item-name= item.name
-              span.currency $
-              span.price= item.price
-            if item.description
-              p
-                span.item-description= item.description
-              
+  h1.restaurant-name #{restaurant.info.name}
+  ul.menu.side-nav
+    -each section in restaurant.menu.sections
+      li.menu.menu-section
+        p.section-header= section.title
+        ul.side-nav
+          -for item in section.items
+            li.menu-section-item
+              div.row
+                div.small-10.columns
+                  p
+                    span.item-name= item.name
+                div.small-2.columns.item-price
+                  p
+                    span.currency $
+                    span.price= item.price.toFixed(2)
+              if item.description
+                div.row
+                  div.small-12.columns
+                    p
+                      span.item-description= item.description
               
   #receipt
     div
