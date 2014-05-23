@@ -1,11 +1,72 @@
+$primary-color: #00A2EA;
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 0px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+	color: #00B7FF;
 }
-.currency {
-  margin-left: 30px;
+
+.restaurant-name {
+	display: none;
+}
+
+.side-nav {
+	padding-top: 0px;
+}
+.side-nav li {
+	margin-bottom: 0;
+}
+
+.menu {
+	max-width: 619px;
+	background-color: #fff;
+}
+.menu .side-nav {
+	margin: 0;
+	padding: 0;
+}
+
+.section-header {
+	color: #fff;
+	font-size: 18px;
+	background-color: $primary-color;
+	text-transform: capitalize;
+	padding: 5px 20px 1px;
+	margin-bottom: 0px;
+}
+
+.menu-section-item {
+	margin-bottom: 0px;
+	padding: 11px 0px 7px 6px;
+	border-bottom: 1px solid #EEE;
+}
+.menu-section-item:last-child {
+	border-bottom: none;
+}
+.menu-section-item .row:first-child {
+	padding-bottom: 13px;
+}
+.menu-section-item p {
+	margin: 0;
+}
+
+.item-name {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+.item-price {
+	padding-right: 4px;
+	text-align: right;
+}
+.item-description {
+	font-size: 13.5px;
+	text-transform: lowercase;
+}
+
+#receipt {
+	padding: 0px 20px;
 }
